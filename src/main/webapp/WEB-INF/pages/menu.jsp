@@ -14,7 +14,7 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/Cars">Cars</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/WEB-INF/pages/user.jsp">User</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">

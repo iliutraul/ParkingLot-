@@ -1,4 +1,4 @@
-package com.parking.lab4parkinglot.entities;
+package com.parking.parkinglot.entities;
 
 import jakarta.persistence.*;
 
