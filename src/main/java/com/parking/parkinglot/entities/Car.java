@@ -18,13 +18,16 @@ public class Car {
     }
 
     @ManyToOne
+    @JoinColumn(name = "owner_id",nullable = false)
     private User owner;
     public User getOwner() {
         return owner;
     };
-    public void setOwner(User owner) {this.owner = owner;};
 
+    public void setOwner(User owner) {
+        this.owner = owner;};
 
+@Column(name="license_plate")
     private String LicensePlate;
     public String getLicensePlate() {
         return LicensePlate;
@@ -32,12 +35,16 @@ public class Car {
     public void setLicensePlate(String licensePlate) {
         LicensePlate = licensePlate;
     }
-    private String ParkingLot;
+    @Column(name="Parking_lot")
+    private String parkingLot;
     public String getParkingLot() {
-        return ParkingLot;
+        return parkingLot;
     }
     public void setParkingLot(String parkingLot) {
-        ParkingLot = parkingLot;
+        this.parkingLot = parkingLot;
     }
 
+    public void setParkingSpot(String parkingSpot) {
+        this.parkingLot = parkingSpot;
+    }
 }
