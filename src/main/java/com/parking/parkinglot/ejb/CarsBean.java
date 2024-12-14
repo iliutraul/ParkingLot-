@@ -66,7 +66,7 @@ public class CarsBean {
         Car car = entityManager.find(Car.class, carId);
         return new CarDto(
                 car.getId(),
-                car.getLicensePlate(),
+                car.getOwner(), car.getLicensePlate(),
                 car.getParkingLot(),
                 car.getOwner().getUsername()
         );

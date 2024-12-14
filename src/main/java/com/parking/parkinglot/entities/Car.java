@@ -6,9 +6,10 @@ import jakarta.persistence.*;
 @Table(name = "car")
 public class Car {
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue
     private Long id;
-
+    private String parkingLot;
+    private String LicensePlate;
     public Long getId() {
         return id;
     }
@@ -18,8 +19,9 @@ public class Car {
     }
 
     @ManyToOne
-    @JoinColumn(name = "owner_id",nullable = false)
+    @JoinColumn(name = "owner_id")
     private User owner;
+
     public User getOwner() {
         return owner;
     };
@@ -27,16 +29,15 @@ public class Car {
     public void setOwner(User owner) {
         this.owner = owner;};
 
-@Column(name="license_plate")
-    private String LicensePlate;
+
     public String getLicensePlate() {
         return LicensePlate;
     }
     public void setLicensePlate(String licensePlate) {
         LicensePlate = licensePlate;
     }
-    @Column(name="Parking_lot")
-    private String parkingLot;
+
+
     public String getParkingLot() {
         return parkingLot;
     }

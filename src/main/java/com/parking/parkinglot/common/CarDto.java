@@ -8,18 +8,14 @@ public class CarDto {
     String parkingLot;
     String ownerName;
 
-    public CarDto(Long id, String licensePlate, String parkingLot, String ownerName) {
+    public CarDto(Long id, User owner, String licensePlate, String parkingLot, String ownerName) {
         this.id = id;
         this.licensePlate = licensePlate;
         this.parkingLot = parkingLot;
         this.ownerName = ownerName;
     }
 
-    public CarDto(Long id, User owner, String licensePlate, String parkingLot) {
-    }
 
-    public CarDto(Long id, User owner, String licensePlate, String parkingLot, String username) {
-    }
 
     public Long getId() {
         return id;
