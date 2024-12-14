@@ -16,6 +16,7 @@ import java.util.List;
         httpMethodConstraints = {@HttpMethodConstraint(value = "POST", rolesAllowed = {"WRITE_CARS"})})
 @WebServlet(name = "Cars", value = "/Cars")
 public class Cars extends HttpServlet {
+
     @Inject
     CarsBean carsBean;
 
