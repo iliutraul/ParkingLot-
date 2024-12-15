@@ -1,6 +1,7 @@
 package com.parking.parkinglot.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ public class User {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "username", unique = true)
+    @Column(name = "username", unique = true, nullable = false,length = 20)
     private String username;
 
     public String getUsername() {
@@ -45,7 +46,8 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
+@Email
+@Column(unique = true, nullable = false,length = 50)
     public String getEmail() {
         return email;
     }

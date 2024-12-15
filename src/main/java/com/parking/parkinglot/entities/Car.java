@@ -1,6 +1,7 @@
 package com.parking.parkinglot.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "car")
@@ -8,7 +9,12 @@ public class Car {
     @Id
     @GeneratedValue
     private Long id;
+    @Size(min = 1, max = 20)
+    @Column(unique = true,nullable = false,length = 20)
     private String parkingLot;
+
+    @Size(min = 3, max = 8)
+    @Column(unique = true,nullable = false,length = 20)
     private String LicensePlate;
 
     private CarPhoto photo;

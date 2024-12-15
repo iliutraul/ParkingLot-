@@ -1,7 +1,6 @@
-package com.parking.parkinglot.servlets;
+package com.parking.parkinglot.servlets.users;
 
 import com.parking.parkinglot.ejb.UserBean;
-import com.parking.parkinglot.entities.User;
 import jakarta.inject.Inject;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -19,7 +18,7 @@ public class AddUser extends HttpServlet {
             response) throws ServletException, IOException {
         request.setAttribute("userGroups", new String[] {"READ_CARS", "WRITE_CARS",
                 "READ_USERS", "WRITE_USERS"});
-        request.getRequestDispatcher("/WEB-INF/pages/addUser.jsp").forward(request,
+        request.getRequestDispatcher("/WEB-INF/pages/users/addUser.jsp").forward(request,
                 response);
     }
 

@@ -93,7 +93,8 @@ public class CarsBean {
 
 
     public void deleteCarsByIds(List<Long> carIds)
-    {LOG.info("deleteCarsByIds");
+    {
+        LOG.info("deleteCarsByIds");
 
         for(Long carId : carIds){
             Car car = entityManager.find(Car.class, carId);

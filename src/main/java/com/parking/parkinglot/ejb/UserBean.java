@@ -85,6 +85,16 @@ public class UserBean {
                         .getResultList();
         return usernames;
     }
+    public UserDto findById(Long userId) {
+
+        User user = entityManager.find(User.class, userId);
+        return new UserDto(
+                user.getId(),
+                user.getEmail(),
+                user.getUsername()
+
+        );
+    }
 
 
 
